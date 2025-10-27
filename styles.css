@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #007bff, #ffffff); /* Blue to white gradient */
+    color: white;
+    overflow: hidden;
+}
+
+#login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#login-page h1 {
+    color: white;
+}
+
+#upload-section {
+    margin: 20px 0;
+}
+
+.file-box {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid white; /* White border for boxes */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Light blue tint */
+}
+
+#login-page label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+#login-page input {
+    width: 82%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #0056b3; /* Darker blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #004085; /* Even darker blue */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    background: #003366;
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    transform: none;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Light blue to white */
+    color: #333; /* Dark text for readability */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #007bff; /* Blue header */
+    color: white;
+}
+
+#map-container {
+    flex: 1;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#dashboard {
+    padding: 10px;
+    background: rgba(0, 123, 255, 0.9); /* Blue dashboard */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+#dashboard div {
+    margin: 5px;
+    font-size: 1.2em;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#scores {
+    padding: 10px;
+    background: #f8f9fa; /* Light gray-white */
+    color: #333;
+}
+
+#score-list {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+#leaderboard {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+    background: rgba(0, 123, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    #dashboard {
+        flex-direction: column;
+    }
+}
+/* ... (keep existing styles) ... */
+
+/* ... (keep existing styles) ... */
+
+#deduction-log {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#log-list {
+    max-height: 100px;
+    overflow-y: auto;
+    background: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ... (rest of the styles remain the same) ... -->/* ... (keep existing styles) ... */
+
+#end-call {
+    background: #dc3545; /* Red for end action */
+}
+
+#end-call:hover {
+    background: #c82333;
+}
+
+/* ... (rest of the styles remain the same) ... -->

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Tracking Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=geometry,places"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="loading" style="display: none;">Loading...</div>
+    
+    <!-- Login Page -->
+    <div id="login-page">
+        <h1>Login to Car Tracking Game</h1>
+        <p>Upload your documents to proceed (required for hackathon demo).</p>
+        <div id="upload-section">
+            <div class="file-box">
+                <label for="license-photo">Driver's License Photo:</label>
+                <input type="file" id="license-photo" accept="image/*" required>
+            </div>
+            <div class="file-box">
+                <label for="aadhar-photo">Aadhar Card Photo:</label>
+                <input type="file" id="aadhar-photo" accept="image/*" required>
+            </div>
+        </div>
+        <div id="saved-message" style="display: none; color: white; margin: 10px;">Documents uploaded. Ready to login.</div>
+        <button id="login-btn" disabled>Login</button>
+        <div id="login-error" style="color: red; display: none;">Please upload both photos.</div>
+    </div>
+    
+    <!-- Main App (hidden until login) -->
+    <div id="app" style="display: none;">
+        <header>
+            <h1>Car Tracking Game</h1>
+            <div id="isolation-warning" style="color: yellow; font-size: 0.8em;">Warning: Full-screen mode active. Other apps cannot be opened; downloads will be interrupted.</div>
+        </header>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        <div id="dashboard">
+            <div id="speed-display">Current Speed: 0 km/h</div>
+            <div id="speed-limit">Speed Limit: 50 km/h</div>
+            <div id="points">Points: 0</div>
+            <div id="timer">Call Timer: 00:00</div>
+            <button id="simulate-call">Simulate Incoming Call</button>
+            <button id="simulate-overtake">Simulate Safe Overtake</button>
+        </div>
+        <div id="scores">
+            <h2>Your Scores</h2>
+            <div id="score-list"></div>
+            <div id="leaderboard">Leaderboard: Top 5 Sessions</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <!-- ... (keep existing code) ... -->
+
+<div id="scores">
+    <h2>Your Scores</h2>
+    <div id="score-list"></div>
+    <div id="leaderboard">Leaderboard: Top 5 Sessions</div>
+    <div id="deduction-log">
+        <h3>Deduction Log</h3>
+        <div id="log-list"></div>
+    </div>
+</div>
+<!-- ... (keep existing code) ... -->
+
+<div id="dashboard">
+    <div id="speed-display">Current Speed: 0 km/h</div>
+    <div id="speed-limit">Speed Limit: 50 km/h</div>
+    <div id="points">Points: 0</div>
+    <div id="timer">Call Timer: 00:00</div>
+    <button id="simulate-call">Simulate Incoming Call</button>
+    <button id="end-call" style="display: none;">End Call</button> <!-- New button -->
+    <button id="simulate-overtake">Simulate Safe Overtake</button>
+</div>
+
+<!-- ... (rest of the code remains the same) ... -->
+<!-- ... (rest of the code remains the same) ... -->
+</body>
+</html>
+<!-- ... (keep existing code) ... -->
+
+
+
+<!-- ... (rest of the code remains the same) ... -->
